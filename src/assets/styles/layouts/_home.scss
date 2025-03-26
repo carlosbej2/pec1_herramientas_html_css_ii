@@ -22,8 +22,8 @@ body {
   border-radius: 2rem;
   text-align: center;
   background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0 0 0 / 10%),
+    0 2px 4px -1px rgba(0 0 0 / 6%);
 }
 
 .uoc-logo {
@@ -34,7 +34,7 @@ body {
   max-width: 200px;
   height: auto;
 
-  @media (min-width: $mqMinWidth) {
+  @media (width >= $mq-min-width) {
     max-width: none;
   }
 }
@@ -45,7 +45,7 @@ body {
   font-weight: 700;
   color: $uoc-corporate;
 
-  @media (min-width: $mqMinWidth) {
+  @media (width >= $mq-min-width) {
     font-size: 36px;
   }
 }
@@ -54,6 +54,26 @@ body {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: #333;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.steps p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $uoc-corporate;
+  font-weight: 500;
 }
 
 .steps {
@@ -78,7 +98,7 @@ body {
       padding: 1rem;
       background-color: #fefefe;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0 0 0 / 5%);
 
       img {
         width: 100%;
@@ -87,107 +107,15 @@ body {
         border-radius: 0.5rem;
         margin-bottom: 1rem;
       }
-
-      p {
-        margin: 0;
-        font-size: 1rem;
-        line-height: 1.4;
-        color: $uoc-corporate;
-        font-weight: 500;
-      }
     }
   }
 
-  // Adaptación para móviles
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     &__grid {
       grid-template-columns: 1fr;
     }
   }
 }
-
-.history {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #fdfaf7;
-  border-left: 5px solid $uoc-corporate;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: $uoc-corporate;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    text-align: justify;
-    color: #333;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 1.5rem;
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-.hero {
-  background: linear-gradient(135deg, #1295f3, #ffffff);
-  padding: 4rem 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 3rem;
-  transition: background 0.5s ease;
-
-  &__title {
-    font-family: $font-family-serif;
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: default;
-
-    &:hover {
-      color: #4800ff;
-      transform: scale(1.03);
-    }
-  }
-
-  &__subtitle {
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    cursor: default;
-
-    &:hover {
-      color: #fdf6e3;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 2.5rem 1.5rem;
-
-    &__title {
-      font-size: 2.2rem;
-    }
-
-    &__subtitle {
-      font-size: 1rem;
-    }
-  }
-}
-
 
 .suggestions {
   margin-top: 4rem;
@@ -201,10 +129,7 @@ body {
 
   > p {
     max-width: 700px;
-    margin: 0 auto 2rem auto;
-    font-size: 1rem;
-    text-align: justify;
-    color: #333;
+    margin: 0 auto 2rem;
   }
 
   &__grid {
@@ -212,16 +137,16 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       grid-template-columns: 1fr;
     }
   }
 
   .suggestion {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 1rem;
     padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0 0 0 / 5%);
     transition: background 0.4s ease;
     border-left: 4px solid $uoc-corporate;
 
@@ -262,6 +187,76 @@ body {
     &:nth-child(6):hover {
       background: linear-gradient(135deg, #fabada, #ff7675);
     }
-    
+  }
+}
+
+.history {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fdfaf7;
+  border-left: 5px solid $uoc-corporate;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0 0 0 / 5%);
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: $uoc-corporate;
+  }
+
+  @media (width <= 768px) {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(135deg, #1295f3, #fff);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem;
+  transition: background 0.5s ease;
+
+  &__title {
+    font-family: $font-family-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
+
+    &:hover {
+      color: #4800ff;
+      transform: scale(1.03);
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: default;
+
+    &:hover {
+      color: #fdf6e3;
+    }
+  }
+
+  @media (width <= 768px) {
+    padding: 2.5rem 1.5rem;
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
   }
 }
