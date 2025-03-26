@@ -1,27 +1,127 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>La Pericana - Alcoy</title>
   </head>
+
   <body>
+    <include src="./views/header.html"></include>
     <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+      <header class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">La Pericana de Alcoy</h1>
+          <p class="hero__subtitle">Un sabor tradicional de la montaña alicantina</p>
+        </div>
+      </header>
+      <main class="main-content">
+        
+        <section class="history">
+          <h2>Historia de la Pericana</h2>
+          <p>
+            La Pericana es uno de los platos más emblemáticos de Alcoy y de la comarca de l'Alcoià, en el interior de Alicante. Nacida de la cocina de aprovechamiento,
+            esta receta sencilla refleja el ingenio y la tradición de una tierra marcada por el frío, la montaña y el respeto por los productos de temporada.
+          </p>
+          <p>
+            Sus ingredientes son humildes: pimientos secos (cuarnicabra), bacalao salado y aceite de oliva virgen extra. Cada casa tiene su toque personal, 
+            y aunque la base es común, hay quien añade ajo crudo, cebolla tierna o incluso una pizca de pimentón.
+          </p>
+          <p>
+            En Alcoy es costumbre servirla durante las fiestas patronales o en encuentros familiares, acompañada de pan tostado y un buen vino de la zona. 
+            Es más que una receta: es un recuerdo colectivo, una expresión de identidad cultural que sigue viva generación tras generación.
+          </p>
+        </section>
+
+        <section class="steps">
+          <h2>Pasos para preparar la Pericana</h2>
+          <div class="steps__grid">
+            <div class="step">
+              <img src="./assets/images/paso1.png" alt="Paso 1: Preparar los pimientos" />
+              <p>1. Quita el rabo y las semillas de los pimientos. Parte cada uno por la mitad.</p>
+            </div>
+            <div class="step">
+              <img src="./assets/images/paso2.png" alt="Paso 2: Asar los pimientos" />
+              <p>2. Asa los pimientos en plancha bien caliente. Solo dos vueltas, ¡que no se quemen!</p>
+            </div>
+            <div class="step">
+              <img src="./assets/images/paso3.png" alt="Paso 3: Picar los pimientos" />
+              <p>3. Pícalos finos (sin llegar a triturar) a mano o con Thermomix.</p>
+            </div>
+            <div class="step">
+              <img src="./assets/images/paso4.png" alt="Paso 4: Desmenuzar el bacalao" />
+              <p>4. Desmiga el lomo de bacalao con tijeras en trozos pequeños.</p>
+            </div>
+            <div class="step">
+              <img src="./assets/images/paso5.png" alt="Paso 5: Cortar el ajo" />
+              <p>5. Pela y corta los ajos en láminas muy finas.</p>
+            </div>
+            <div class="step">
+              <img src="./assets/images/paso6.png" alt="Paso 6: Mezclar todo" />
+              <p>6. Mezcla todo en un bol con aceite de oliva. Que quede jugoso, pero sin exceso.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="suggestions">
+          <h2>¿Con qué combinar la Pericana?</h2>
+          <p>
+            La Pericana es un plato lleno de sabor e intensidad, por lo que maridarla correctamente puede potenciar aún más la experiencia gastronómica. 
+            Aquí te dejamos algunas sugerencias tradicionales y otras un poco más atrevidas para disfrutarla al máximo:
+          </p>
+        
+          <div class="suggestions__grid">
+            <div class="suggestion">
+              <h3>🥖 Pan de pueblo tostado</h3>
+              <p>
+                El pan de corteza crujiente y miga densa es el acompañante clásico. Tostado ligeramente y untado con Pericana.
+              </p>
+            </div>
+        
+            <div class="suggestion">
+              <h3>🧀 Queso curado de oveja</h3>
+              <p>
+                El contraste entre el bacalao y el queso curado realza la intensidad de ambos. Una combinación ideal para servir en una tabla de aperitivos.
+              </p>
+            </div>
+        
+            <div class="suggestion">
+              <h3>🍷 Vino tinto de la zona</h3>
+              <p>
+                Vins del Comtat o cualquier tinto joven con cuerpo son ideales para acompañar la textura aceitosa y el punto salado del plato.
+              </p>
+            </div>
+        
+            <div class="suggestion">
+              <h3>🥗 Ensaladas frescas</h3>
+              <p>
+                Una ensalada con tomate valenciano, cebolla tierna y aceitunas negras, equilibra los sabores fuertes (el pimiento agría bastante)
+              </p>
+            </div>
+        
+            <div class="suggestion">
+              <h3>🍳 Huevos duros o escalfados</h3>
+              <p>
+                Añadir medio huevo duro a un montadito de Pericana es una costumbre popular en algunas casas alcoyanas. Aporta suavidad y redondez.
+              </p>
+            </div>
+
+            <div class="suggestion">
+              <h3>🍅 Tomate rallado con ajo y aceite</h3>
+              <p>
+                Fresco, potente y tradicional. Aporta acidez y suavidad al pan antes de añadir la Pericana.
+              </p>
+            </div>
+            
+          </div>
+        </section>
+        
+      </main>
     </div>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
